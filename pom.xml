@@ -20,31 +20,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.stormpath.samples</groupId>
-    <artifactId>todos</artifactId>
+    <artifactId>spi</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>Todos</name>
-    <description>Sample Todos REST+JSON application with JAX-RS/Jersey</description>
-    <url>https://github.com/stormpath/todos-jersey</url>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <connection>scm:git:git@github.com:stormpath/todos-jersey.git</connection>
-        <developerConnection>scm:git:git@github.com:stormpath/todos-jersey.git</developerConnection>
-        <url>git@github.com:stormpath/todos-jersey.git</url>
-    </scm>
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/stormpath/todos-jersey/issues</url>
-    </issueManagement>
+    <name>SPI</name>
+    <description>SPI REST+JSON</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -114,8 +95,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>7</source>
+                    <target>7</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>

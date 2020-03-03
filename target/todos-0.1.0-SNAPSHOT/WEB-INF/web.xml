@@ -15,4 +15,13 @@
         <servlet-name>Jersey RESTful Application</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
+    <filter>
+        <filter-name>RestCORSFilter</filter-name>
+        <filter-class>utility.CORSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RestCORSFilter</filter-name>
+        <url-pattern>/rest/*</url-pattern>
+    </filter-mapping>
+
 </web-app>
