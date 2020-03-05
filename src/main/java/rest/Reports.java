@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 import DB.ReportDAO;
 import org.codehaus.jettison.json.JSONArray;
 
-@Path("report")
+@Path("api/reports")
 public class Reports {
     @Path("/")
     @GET

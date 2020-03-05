@@ -5,9 +5,14 @@ import models.UserModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.UUID;
 
 public class UserDAO {
     private static UserModel user;
+
+    private static HashMap<String, UserModel> users = new HashMap<String, UserModel>();
+
     public static Boolean login(String username, String password) throws Exception {
 
         PreparedStatement pstmt = null;
@@ -26,6 +31,11 @@ public class UserDAO {
                 user = new UserModel();
                 user.setName(rs.getString("name"));
                 user.setId(rs.getInt("id"));
+                String token = UUID.randomUUID().toString();
+
+                user.setToken(token);
+
+                users.put(token, user);
                 return true;
             }
 
@@ -39,6 +49,14 @@ public class UserDAO {
             connection.close();
         }
         return false;
+    }
+
+    public static void logout(String token){
+        users.remove(token);
+    }
+
+    public static Boolean checkUserLogin(String token){
+        return users.containsKey(token);
     }
 
     public static UserModel getUser(){

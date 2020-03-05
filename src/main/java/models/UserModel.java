@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 public class UserModel {
     private int id;
     private String name;
+    private String token;
 
     public void setId(int id) {
         this.id = id;
@@ -21,5 +22,13 @@ public class UserModel {
 
     public String getName() {
         return name;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getToken() {
+        return token;
     }
 }
