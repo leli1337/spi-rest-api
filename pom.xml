@@ -34,7 +34,7 @@
         <jersey.version>1.14</jersey.version>
 
         <jetty.version>8.1.5.v20120716</jetty.version>
-        <logback.version>1.0.7</logback.version>
+        <logback.version>1.2.0</logback.version>
     </properties>
 
     <dependencies>
